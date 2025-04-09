@@ -7,12 +7,14 @@ const {
   getPropertyById,
   updateProperty,
   deleteProperty,
+} = require("../Controller/Propertys");
+const {
   createBlog,
   getAllBlogs,
   updateBlogs,
   deleteBlos,
   getBlogById,
-} = require("../Controller");
+} = require("../Controller/Blogs");
 
 //Flats
 router.post("/flats/create", createProperty);

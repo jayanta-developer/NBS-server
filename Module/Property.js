@@ -1,11 +1,6 @@
 const mongoose = require("mongoose");
 
 const PropertySchema = new mongoose.Schema({
-  id: {
-    type: String,
-    unique: true, // Ensure uniqueness
-    default: () => new mongoose.Types.ObjectId().toString(), // Auto-generate unique id
-  },
   title: {
     type: String,
     required: true,
@@ -30,10 +25,6 @@ const PropertySchema = new mongoose.Schema({
       },
     },
   ],
-  video: {
-    type: String, // URL or path to the video
-    required: true,
-  },
   city: {
     type: String,
     required: true,
@@ -42,13 +33,9 @@ const PropertySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  mapLat: {
-    type: String,
-    required: true,
-  },
-  mapLong: {
-    type: String,
-    required: true,
+  map: {
+    lat: String,
+    lng: String,
   },
   price: {
     type: String,
@@ -82,12 +69,32 @@ const PropertySchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  facilities: [
+  amenities: [
     {
       type: String,
       required: true,
     },
   ],
+  propertyType: {
+    type: String,
+    required: true,
+  },
+  foolrSize: {
+    type: String,
+    required: true,
+  },
+  listedOn: {
+    type: String,
+    required: true,
+  },
+  listingId: {
+    type: String,
+    required: true,
+  },
+  buildingArea: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Property", PropertySchema);

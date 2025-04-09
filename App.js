@@ -8,12 +8,6 @@ const express = require("express");
 //Routers
 const Router = require("./Router");
 
-//DB connection
-const DB = process.env.DATABASE.replace(
-  "<db_password>",
-  process.env.DATABASE_PASSWORD
-);
-
 mongoose
   .connect(process.env.DATABASE, {})
   .then(() => console.log("Database connected successful!"))
@@ -23,6 +17,7 @@ mongoose
       err
     )
   );
+
 const App = express();
 App.use(express.json());
 App.use(express.urlencoded({ extended: true }));
