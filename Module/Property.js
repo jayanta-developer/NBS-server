@@ -5,26 +5,11 @@ const PropertySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  summery: {
+  summary: {
     type: String,
     required: true,
   },
-  images: [
-    {
-      image: {
-        type: String,
-        required: true,
-      },
-      altText: {
-        type: String,
-        required: true,
-      },
-      imgId: {
-        type: String,
-        // required: true,
-      },
-    },
-  ],
+  images: [],
   city: {
     type: String,
     required: true,
@@ -34,8 +19,8 @@ const PropertySchema = new mongoose.Schema({
     required: true,
   },
   map: {
-    lat: String,
-    lng: String,
+    lat: Number,
+    lng: Number,
   },
   price: {
     type: String,
@@ -69,12 +54,7 @@ const PropertySchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  amenities: [
-    {
-      type: String,
-      required: true,
-    },
-  ],
+  amenities: [],
   propertyType: {
     type: String,
     required: true,
@@ -87,14 +67,15 @@ const PropertySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  listingId: {
-    type: String,
-    required: true,
-  },
   buildingArea: {
     type: String,
     required: true,
   },
+  address: {
+    type: String,
+    required: true,
+  },
+ 
 });
 
 module.exports = mongoose.model("Property", PropertySchema);
