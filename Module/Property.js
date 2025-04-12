@@ -75,7 +75,10 @@ const PropertySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
- 
+  agent: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Property", PropertySchema);
