@@ -15,11 +15,17 @@ const {
   deleteBlos,
   getBlogById,
 } = require("../Controller/Blogs");
+const {
+  createOffice,
+  getAllOffice,
+  getOfficeById,
+  deleteOffice,
+} = require("../Controller/Office");
 
 //Flats
 router.post("/flats/create", createProperty);
 router.get("/flats", getAllProperties);
-router.get("/flats/:id", getPropertyById);
+router.get("/flat/:id", getPropertyById);
 router.post("/flats/update/:id", updateProperty);
 router.post("/flats/delete/:id", deleteProperty);
 
@@ -29,5 +35,10 @@ router.get("/blogs", getAllBlogs);
 router.get("/blog/:id", getBlogById);
 router.post("/blog/update/:id", updateBlogs);
 router.post("/blog/delete/:id", deleteBlos);
+
+//Office
+router.post("/office/create", createOffice);
+router.get("/office", getAllOffice);
+router.post("/office/delete/:id", deleteOffice);
 
 module.exports = router;

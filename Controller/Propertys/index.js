@@ -28,6 +28,7 @@ exports.getPropertyById = async (req, res) => {
     if (!property) {
       return res.status(404).json({ message: "Property not found" });
     }
+    console.log(property);
     res.status(200).json(property);
   } catch (error) {
     res.status(500).json({ error: error.message });

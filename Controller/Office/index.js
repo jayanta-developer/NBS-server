@@ -52,9 +52,10 @@ exports.updateProperty = async (req, res) => {
 };
 
 // Delete a office by ID
-exports.deleteProperty = async (req, res) => {
+exports.deleteOffice = async (req, res) => {
   try {
     const deletedOffice = await Office.findByIdAndDelete(req.params.id);
+
     if (!deletedOffice) {
       return res.status(404).json({ message: "Office not found" });
     }

@@ -9,7 +9,15 @@ const OfficeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  Configuration:String,
+  metaTitle: {
+    type: String,
+    required: true,
+  },
+  metaDescription: {
+    type: String,
+    required: true,
+  },
+  configuration:String,
   RERACarpetArea:String,
   ReadyToPosses:String,
   AveragePricepersqft:String,
@@ -24,11 +32,8 @@ const OfficeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  meta_title: {
-    type: String,
-    required: true,
-  },
-  meta_description: {
+ 
+  price:{
     type: String,
     required: true,
   },
