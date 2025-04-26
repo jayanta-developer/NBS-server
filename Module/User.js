@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const AgentSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -9,12 +9,12 @@ const AgentSchema = new mongoose.Schema({
     type: String,
   },
   image: String,
-  phone: String,
+  number: String,
   role: {
     type: String,
     required: true,
-    enum: ["user", "agent"],
+    enum: ["Client", "Agent"],
   },
 });
 
-module.exports = mongoose.model("Agent", AgentSchema);
+module.exports = mongoose.model("User", UserSchema);

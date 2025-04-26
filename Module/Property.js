@@ -77,8 +77,19 @@ const PropertySchema = new mongoose.Schema({
   },
   agent: {
     type: String,
-    required: true,
   },
+  FAQ: [
+    {
+      question: {
+        type: String,
+        required: true,
+      },
+      answer: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 });
 
 module.exports = mongoose.model("Property", PropertySchema);

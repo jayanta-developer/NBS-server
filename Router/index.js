@@ -22,6 +22,8 @@ const {
   deleteOffice,
 } = require("../Controller/Office");
 
+const { createUser, getAllUsers } = require("../Controller/Users");
+
 //Flats
 router.post("/flats/create", createProperty);
 router.get("/flats", getAllProperties);
@@ -39,6 +41,11 @@ router.post("/blog/delete/:id", deleteBlos);
 //Office
 router.post("/office/create", createOffice);
 router.get("/office", getAllOffice);
+router.get("/office/:id", getOfficeById);
 router.post("/office/delete/:id", deleteOffice);
+
+//User
+router.post("/user/create", createUser);
+router.get("/users", getAllUsers);
 
 module.exports = router;
