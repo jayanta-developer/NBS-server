@@ -17,11 +17,11 @@ const OfficeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  configuration:String,
-  RERACarpetArea:String,
-  ReadyToPosses:String,
-  AveragePricepersqft:String,
-  RERAID:String,
+  configuration: String,
+  RERACarpetArea: String,
+  ReadyToPosses: String,
+  AveragePricepersqft: String,
+  RERAID: String,
   amenities: [],
   map: {
     lat: Number,
@@ -32,12 +32,14 @@ const OfficeSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
- 
-  price:{
+
+  price: {
     type: String,
     required: true,
   },
-
+  agent: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model("Office", OfficeSchema);
