@@ -5,34 +5,17 @@ const SummeryItem = new mongoose.Schema({
     type: String,
     required: true,
   },
-  text: {
-    type: String,
-    required: true,
-  },
+  summarys: [{ summary: String }],
 });
 
 const BlogSchema = new mongoose.Schema({
-  images: [
-    {
-      image: {
-        type: String,
-        required: true,
-      },
-      altText: {
-        type: String,
-        required: true,
-      },
-      imgId: {
-        type: String,
-        // required: true,
-      },
-    },
-  ],
-  conclusion: {
+  title: {
     type: String,
     required: true,
   },
-  SummeryArray: [SummeryItem],
+  images: [],
+  date: String,
+  blogText: [SummeryItem],
   meta_title: {
     type: String,
     required: true,

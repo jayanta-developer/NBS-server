@@ -20,6 +20,7 @@ const {
   getAllOffice,
   getOfficeById,
   deleteOffice,
+  updateOffice
 } = require("../Controller/Office");
 
 const { createUser, getAllUsers } = require("../Controller/Users");
@@ -42,6 +43,7 @@ router.post("/blog/delete/:id", deleteBlos);
 router.post("/office/create", createOffice);
 router.get("/office", getAllOffice);
 router.get("/office/:id", getOfficeById);
+router.post("/office/update/:id", updateOffice);
 router.post("/office/delete/:id", deleteOffice);
 
 //User

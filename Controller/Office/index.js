@@ -35,7 +35,7 @@ exports.getOfficeById = async (req, res) => {
 };
 
 // Update a office by ID
-exports.updateProperty = async (req, res) => {
+exports.updateOffice = async (req, res) => {
   try {
     const updatedoffice = await Office.findByIdAndUpdate(
       req.params.id,
