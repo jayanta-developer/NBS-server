@@ -16,11 +16,11 @@ const BlogSchema = new mongoose.Schema({
   images: [],
   date: String,
   blogText: [SummeryItem],
-  meta_title: {
+  metaTitle: {
     type: String,
     required: true,
   },
-  meta_description: {
+  metaDescription: {
     type: String,
     required: true,
   },
